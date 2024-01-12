@@ -6,6 +6,7 @@ public class Bicicleta {
     private String modelo;
     private String cor;
     private double velocidade = 0.0;
+    private final double VELOCIDADE_MAXIMA = 120.0;
 
     public Bicicleta() {
     }
@@ -17,8 +18,18 @@ public class Bicicleta {
     }
 
     public void pedalar(double aceleracao){
-        if(getVelocidade() >= 0){
-            velocidade += aceleracao;
+        if(pegarVelocidadeAtual() < VELOCIDADE_MAXIMA){
+            this.velocidade += aceleracao;
+        }
+    }
+
+    public void frear(){
+        double REDUZIR_VELOCIDADE = 5.0;
+        if(pegarVelocidadeAtual() > REDUZIR_VELOCIDADE){
+            this.velocidade -= REDUZIR_VELOCIDADE;
+            System.out.println("Deu certo. Freiou.");
+        } else {
+            System.out.println("Não pôde frear");
         }
     }
 

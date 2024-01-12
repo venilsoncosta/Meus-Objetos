@@ -8,5 +8,11 @@ public class BicicletaTeste {
         System.out.println(bicicleta1);
         bicicleta1.pedalar(10.2);
         System.out.println(bicicleta1.pegarVelocidadeAtual());
+        bicicleta1.frear();
+        System.out.println(bicicleta1.pegarVelocidadeAtual());
+        bicicleta1.frear();
+        System.out.println(bicicleta1.pegarVelocidadeAtual());
+        bicicleta1.frear();
+
     }
 }
