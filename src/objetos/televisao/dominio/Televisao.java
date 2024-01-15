@@ -16,7 +16,11 @@ public class Televisao {
     @Override
     public String toString() {
         return "Marca: " + marca +
-                "Preço: " + preco;
+                "| Preço: " + preco;
+    }
+
+    public void ligarTv(){
+        ligada = true;
     }
 
     public String getMarca() {
