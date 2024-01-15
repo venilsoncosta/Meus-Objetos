@@ -40,16 +40,18 @@ public class Televisao {
     }
 
     public void aumentarVolume(){
-        if(getVolume() < VOLUME_MAXIMO){
-            this.volume += 1;
-        }else {
-            System.out.println("Não é possível aumentar o volume.");
+        volume++;
+        if(getVolume() <= VOLUME_MAXIMO){
+            System.out.println("O volume está no máximo");
+            volume = VOLUME_MAXIMO;
         }
     }
 
     public void diminuirVolume(){
-        if(getVolume() > 0){
-            this.volume -= 1;
+        volume--;
+        if(volume <= 0){
+            System.out.println("Não é possível diminuir o volume");
+            volume = 0;
         }
     }
 
