@@ -13,5 +13,7 @@ public class TesteTelevisao {
 
         minhaTv.diminuirVolume();
         System.out.println(minhaTv);
+        minhaTv.desligarTv();
+        System.out.println(minhaTv);
     }
 }

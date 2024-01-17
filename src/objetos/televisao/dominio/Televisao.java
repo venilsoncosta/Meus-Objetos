@@ -41,7 +41,7 @@ public class Televisao {
 
     public void aumentarVolume(){
         volume++;
-        if(getVolume() <= VOLUME_MAXIMO){
+        if(getVolume() == VOLUME_MAXIMO){
             System.out.println("O volume está no máximo");
             volume = VOLUME_MAXIMO;
         }
